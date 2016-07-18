@@ -10,3 +10,4 @@
     * A commit is a way to add files to a given branch. A good commit message clearly state the changes made to a given file while maintaining brevity.  
 * What is a merge conflict?
     * A merge conflict is a discrepancy between the commits of two or more branches. 
+* Adding an arbitrary change
