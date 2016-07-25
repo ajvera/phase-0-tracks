@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <title>Practicing Forms</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
 </head>
 <body>
-<form>
-  <fieldset>
+  <form name="practice" action="success.html" method="get">
+    <select name="favorite-book">
+      <option value="book">Over The Top</option>
+      <option value="book">Foundation</option>
+      <option value="book">One Fish, Two Fish, Red Fish, Blue Fish</option>
+    </select><br>
+    <textarea name="text" rows="10" cols="55">Write here!</textarea>
+
     <div>
-      <label></label>
-      <input type="" name="">
+      <label>Author's Name</label>
+      <input type="text" name="author">
     </div>
-  </fieldset>
-    <fieldset>
     <div>
-      <label></label>
-      <input type="" name="">
+      <label>Please give us your email to subscribe to our mailing list.</label>
+      <input type="email" name="mailing-list">
     </div>
-  </fieldset>  <fieldset>
     <div>
-      <label></label>
-      <input type="" name="">
+      <label>Enter your b-day!</label>
+      <input type="date" name="birthday">
     </div>
-  </fieldset>
+
+    <button type="submit">Submit</button>
   </form>
 </body>
 </html>
