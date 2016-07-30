@@ -14,7 +14,7 @@ cite {
   padding-left: 0px;
   width: 20%;
   display: table-cell;
-  vertical-align: text-top;
+  position: relative;
 }
 
 /* you're welcome to edit the
@@ -38,13 +38,14 @@ body{
   display: table;
   vertical-align: text-top;
   max-width: 960px;
+  position: absolute;
 }
-
-main{
+main {
   width: 80%;
   display: table-cell;
   vertical-align: text-top;
   min-width: 300px;
+  position: relative;
 }
 /*@media screen and (max-width: 500px) {
   body {
