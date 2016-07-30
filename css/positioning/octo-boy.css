@@ -1,0 +1,22 @@
+body {
+	position:relative;
+}
+.puss {
+	display: block;
+	margin: 125px;
+	z-index: 0;
+	position: absolute;
+}
+.specs {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	left: 100;
+}
+.head-item {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	left:115px;
+
+}
