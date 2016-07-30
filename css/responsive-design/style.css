@@ -15,7 +15,6 @@ cite {
   width: 20%;
   display: table-cell;
   vertical-align: text-top;
-  min-width: 237px;
 }
 
 /* you're welcome to edit the
@@ -46,4 +45,21 @@ main{
   display: table-cell;
   vertical-align: text-top;
   min-width: 300px;
+}
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+@media screen and (max-width: 550px) {
+  main {
+    font-size: 10px;
+    min-width: 100px;
+  }
+  img {
+    width:75%;
+  }
+  #external-links {
+    font-size: 10px;
+  }
 }
