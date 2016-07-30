@@ -1,0 +1,23 @@
+section#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background-color: #e9e5dc;
+	border-radius: 25px;
+	padding: 25px;
+	margin: 25px;
+}
+
+/* .job ul {
+	font-size: .8em;
+
+}
+
+Adam found a work around that may include less typing to address all UL elements, as they all appear in elements under "job" classes.
+
+*/
+
+.accomplishments {
+	font-size: .8em;
+}
