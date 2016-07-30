@@ -1,13 +1,13 @@
 body {
 	position:relative;
 }
-.puss {
+.octo {
 	display: block;
 	margin: 125px;
 	z-index: 0;
 	position: absolute;
 }
-.specs {
+.face-item {
 	display: block;
 	position: absolute;
 	z-index: 1;
