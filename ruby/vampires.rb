@@ -1,6 +1,9 @@
 p "What is your name?"
 name = gets.chomp
 
+p "What year were you born?"
+yob = gets.chomp
+
 p "How old are you?"
 age = gets.chomp
 
