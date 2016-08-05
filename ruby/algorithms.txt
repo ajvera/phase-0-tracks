@@ -1,0 +1,14 @@
+#assumes non-sentience of robot
+
+-while the elevator has more than 0 occupants 
+	-say "which floor would you like, please?"
+		-if more than one response is heard say "one at a time please" 
+
+-while the total # of occupants in the elevator is > 1
+	-say "Please tell me when to stop."
+	-until you hear a number response
+		-touch and count buttons starting at the bottom left button and moving up	
+		-When there are no more buttons above the current button move one button to the right 
+		-countinue counting up as you touch all the buttons moving down
+		-when there 
+		for every occupant in the elevator say "Which floor please?"
