@@ -1,4 +1,4 @@
-#assumes non-sentience of robot
+#Algorithm for elevator robot.
 
 -while the total # of occupants in the elevator is > 1
 	-say "Which floor please."
@@ -7,8 +7,20 @@
             -Start count at 1   
     		- Count and touch buttons at the same time starting at the bottom left button and moving up	
     		-When there are no more buttons above the current button touch the first button to the right and increase count by one
-    		-countinue count as you touch all the buttons moving down
+    		-continue count as you touch all the buttons moving down
     		-when there are no more buttons below the current button touch the first button to the right and increment count by one
             - continue count as you touch all the buttons moving up
         - When count matches the response press the button currently being touched. 
-    
+
+#Washing Dishes
+
+-Until sink is empty
+-for every dish in the sink
+    -Put small amt of soap on the sponge 
+    -put small amt of hot water on sponge
+    -scrub 100% of dish surface until there are no textural or color anomalies 
+    -rinse dish with water
+    -put dish in the drying rack
+
+
+
