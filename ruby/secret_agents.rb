@@ -38,12 +38,6 @@ def decrypt (encrypted_pass)
   p encrypted_pass
 end
 
-#alphabet[alphabet.index(encrypted_pass[index])
-
-#encrypted_pass[index] = character @ index value
-#alphabet.index() = int location of character
-#alphabet[] = character @
-
 #p decrypt(encrypt("some string"))
 
 p "would you like to encrypt of decrypt a password"
