@@ -14,7 +14,7 @@ def encrypt (password)
     end
     index += 1
   end
-  return password
+  p password
 end
 
 #get the encrypted password
@@ -31,19 +31,25 @@ def decrypt (encrypted_pass)
     elsif encrypted_pass[index] == "a"
       then encrypted_pass[index] = "z"
     else
-      encrypted_pass[index] = alphabet[alphabet.index(encrypted_pass[index])-1]
+      encrypted_pass[index] = alphabet[alphabet.index(encrypted_pass[index]) -1]
     end
     index += 1
   end
-  return encrypted_pass
+  p encrypted_pass
 end
+
+#alphabet[alphabet.index(encrypted_pass[index])
+
+#encrypted_pass[index] = character @ index value
+#alphabet.index() = int location of character
+#alphabet[] = character @
 
 #p decrypt(encrypt("some string"))
 
 p "would you like to encrypt of decrypt a password"
-$response = gets.chomp
+$response = gets.chomp.downcase
 p "what is your password"
-$pass = gets.chomp
+$pass = gets.chomp.downcase
 if $response.downcase == "encrypt"
   then encrypt($pass)
 elsif $response.downcase == "decrypt"
