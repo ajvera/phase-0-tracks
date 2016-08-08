@@ -1,4 +1,5 @@
 current_year = Time.now.year
+allergies = nil
 suspicious_name = nil
 suspicious_age = nil
 suspicious_taste = nil
@@ -47,8 +48,21 @@ while i < employees.to_i
   else
   end
 
-  if suspicious_age == false && suspicious_taste == false ||
-  suspicious_age == false && suspicious_insurance_needs == false && suspicious_name == false
+  until allergies == "done" 
+    p "Do you have any allergies? (type 'done' when finished)"
+    allergies = gets.chomp
+    if allergies == "sunshine"
+      then p "Probably a vampire."
+      break
+    else
+    end
+  end
+
+
+  if allergies == "sunshine"
+    then break
+  elsif suspicious_age == false && suspicious_taste == false && allergies != "sunshine"||
+  suspicious_age == false && suspicious_insurance_needs == false && allergies != "sunshine"
     then p "Probably not a vampire."
   elsif suspicious_age == true && suspicious_taste == true ||
   suspicious_age == true && suspicious_insurance_needs == true
