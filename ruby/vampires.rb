@@ -45,7 +45,7 @@ elsif needs_health_insurance.downcase == "no" || needs_health_insurance.downcase
 else
 end
 
-if suspicious_age == true
+if suspicious_name == true
   then p "Definitely a vampire."
 elsif suspicious_age == false && suspicious_taste == false ||
 suspicious_age == false && suspicious_insurance_needs == false
@@ -58,15 +58,3 @@ elsif suspicious_age == true && suspicious_taste == true && suspicious_insurance
 else p "Results inconclusive"
 end
     
-
-
-
-  
-age = gets.chomp
-
-p "Our cafeteria serves garlic bread."
-p "Should we order some for you?"
-likes_garlic = gets.chomp
-
-p "Would you like to enroll in the company's health insurance?"
-needs_health_insurance = gets.chomp
