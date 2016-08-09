@@ -1,3 +1,18 @@
+def add_to_array(a,b)
+	a << b
+end
+
+p add_to_array([],"an item")
+p add_to_array(["a","b",8],true)
+
+def build_array(x,y,z)
+	new_array = []
+	new_array << x << y << z
+	p new_array
+end
+
+build_array(5,"entropy", 85.978)
+
 practice = []
 p practice
 
