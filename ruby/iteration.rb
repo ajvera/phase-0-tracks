@@ -36,3 +36,67 @@ superheroes.each do |secret,hero|
 end
 
 p superheroes
+
+#Release 2: Use the Documentation
+nineties_toys = ["silly putty", "gak", "ferbie", "creepy", "tomigachi"]
+
+
+regrets = {
+    16 => "everything",
+    20 => "being self-conscious",
+    8 => "not getting a tatoo"
+}
+
+# 1. Found an array method based on a condition:
+p nineties_toys
+
+nineties_toys.delete_if { |toy| 
+    toy.include?("g")
+}
+
+p nineties_toys
+
+
+p regrets
+
+regrets.delete_if {|age, regret|
+    age > 18
+}
+
+p regrets
+
+#2.
+#array
+p nineties_toys
+
+nineties_toys.select! { |toy| 
+    toy.length < 7
+}
+
+p nineties_toys
+
+
+#hash
+p regrets
+
+regrets.select! { |age, reret| 
+    age > 18
+}
+
+p regrets
+
+
+
+#Finding a new method to do what we did in number 2
+
+
+#4.
+p nineties_toys
+
+nineties_toys.keep_if { |toy|
+    toy.start_with?("c")
+}
+
+# Find a method that will not return creepy when creepy is after ferbie in the array
+
+p nineties_toys
