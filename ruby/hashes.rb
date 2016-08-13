@@ -9,7 +9,7 @@ $client_details = {
   feng_shui: nil
 }
 
-#create method to translate responses into
+#create method to translate responses into boolean
 def feng_trans(response)
   if response == "yes"
     then $client_details[:feng_shui] = true
