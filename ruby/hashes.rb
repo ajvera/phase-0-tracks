@@ -1,12 +1,5 @@
-#pseudocode and write a program that will allow an interior designer to 
-#enter the details of a given client: the client's name, age, number of children, 
-#decor theme, and so on (you can choose your own as long as it's 
-#a good mix of string, integer, and boolean data).
 
-#Prompt the designer/user for all of this information.
-#Convert any user input to the appropriate data type.
-#Print the hash back out to the screen when the designer has answered 
-#all of the questions.
+
 #Give the user the opportunity to update a key (no need to loop, once is fine). 
 #After all, sometimes users make mistakes! If the designer says "none", skip it. 
 #But if the designer enters "decor_theme" (for example), your program should ask 
@@ -17,12 +10,36 @@
 #Print the latest version of the hash, and exit the program.
 
 #BUISNESS LOGIC
+#Create a hash where keys represent the details needed for a given client
+#and the values are set to nil (will later be replaced with user input) 
 client_details = {
   name: nil,
   age: nil,
   number_of_children: nil,
-  decor_theme:
+  decor_theme: nil,
+  feng_shui: nil
 }
 
-def hash_it()  
 #USER INTERFACE
+#print questions for user data and assign responses as hash values
+p "Welcome to the custom interior design-o-max 821.c"
+p "Please enter your name" 
+client_details[:name] = gets.chomp.to_s
+p "How many years old are you?"
+client_details[:age] = gets.chomp.to_i
+p "How many children do you have?"
+client_details[:number_of_children] = gets.chomp.to_s
+p "What theme would you like your interior design to have?"
+client_details[:decor_theme] = gets.chomp.to_s
+p "Do you care about Feng Shui? (yes or no)"
+client_details[:feng_shui] = gets.chomp.to_s
+if client_details[:feng_shui] == "yes"
+  then client_details[:feng_shui] = true
+else
+  client_details[:feng_shui] = false
+end
+p client_details
+p "Would you like to make any changes to these responses? (if none type 'none')"
+edit_response = gets.chomp
+if edit_response 
+
