@@ -17,5 +17,12 @@
 #Print the latest version of the hash, and exit the program.
 
 #BUISNESS LOGIC
+client_details = {
+  name: nil,
+  age: nil,
+  number_of_children: nil,
+  decor_theme:
+}
 
+def hash_it()  
 #USER INTERFACE
