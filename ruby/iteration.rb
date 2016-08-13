@@ -39,13 +39,34 @@ p superheroes
 
 #Release 2: Use the Documentation
 nineties_toys = ["silly putty", "gak", "ferbie", "creepy", "tomigachi"]
-
+dream_jobs = ["professional nacho eater", "assistant napper", "pizza consultant", "baker"]
+prime_numbers[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+shades_of_green["dark","forest","lime","vomit"]
 
 regrets = {
     16 => "everything",
     20 => "being self-conscious",
     8 => "not getting a tatoo"
 }
+expenses = {
+  groceries: 500,
+  bills: 200,
+  donations: 200,
+  entertainment: 150
+}
+prefrences = {
+  likes_silence: true,
+  "likes turtles" => true,
+  likes_injustice: false,
+  "likes_eating_gross_stuff" => false
+}
+class_examples = {
+  boolean: 9 < 10,
+  string: "Thanks for all the fish",
+  fixnum: 5,
+  float: 597.23918
+}
+
 
 # 1. Found an array method based on a condition:
 p nineties_toys
