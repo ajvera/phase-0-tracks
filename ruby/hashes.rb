@@ -9,7 +9,7 @@ $client_details = {
   feng_shui: nil
 }
 
-#create method to translate responses into boolean
+#create method to translate responses into boolean datatype
 def feng_trans(response)
   if response == "yes"
     then $client_details[:feng_shui] = true
@@ -35,6 +35,9 @@ p "Do you care about Feng Shui? (yes or no)"
 feng_response = gets.chomp.to_s
 feng_trans(feng_response)
 p $client_details
+
+#Add logic to allow user to edit one of their responses and
+#ensure integrity of datatypes 
 p "Would you like to make any changes to these responses? (if none type 'none')"
 edit_response = gets.chomp.to_sym
 if edit_response == :feng_shui
