@@ -39,64 +39,78 @@ p superheroes
 
 #Release 2: Use the Documentation
 nineties_toys = ["silly putty", "gak", "ferbie", "creepy", "tomigachi"]
-
+dream_jobs = ["professional nacho eater", "assistant napper", "pizza consultant", "baker"]
+prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+shades_of_green = ["dark","forest","lime","vomit"]
 
 regrets = {
     16 => "everything",
     20 => "being self-conscious",
     8 => "not getting a tatoo"
 }
-
-# 1. Found an array method based on a condition:
-p nineties_toys
-
-nineties_toys.delete_if { |toy| 
-    toy.include?("g")
+expenses = {
+  groceries: 500,
+  bills: 200,
+  donations: 200,
+  entertainment: 150
+}
+prefrences = {
+  likes_silence: true,
+  "likes turtles" => true,
+  likes_injustice: false,
+  "likes_eating_gross_stuff" => false
+}
+class_examples = {
+  boolean: 9 < 10,
+  string: "Thanks for all the fish",
+  fixnum: 5,
+  float: 597.23918
 }
 
-p nineties_toys
-
-
-p regrets
-
-regrets.delete_if {|age, regret|
-    age > 18
-}
-
-p regrets
-
-#2.
+# 1. delete based on condition
 #array
 p nineties_toys
-
-nineties_toys.select! { |toy| 
-    toy.length < 7
-}
-
+nineties_toys.delete_if { |toy| toy.include?("g") }
 p nineties_toys
-
-
 #hash
 p regrets
-
-regrets.select! { |age, reret| 
-    age > 18
-}
-
+regrets.delete_if {|age, regret| age > 18 }
 p regrets
 
+#2. filter based on condition
+#array
+p dream_jobs
+dream_jobs.select! { |job| job.length < 18 }
+p dream_jobs
+#hash
+p expenses
+expenses.select! { |expense, cost| cost > 200 }
+p expenses
 
+#3. filter based on condition
+#array
+p prime_numbers
+prime_numbers.keep_if do |num|
+  num.even?
+end
+p prime_numbers
+#hash
+p prefrences
+prefrences.keep_if do |pref, bool|
+  bool == true
+end
+p prefrences
 
-#Finding a new method to do what we did in number 2
-
-
-#4.
-p nineties_toys
-
-nineties_toys.keep_if { |toy|
-    toy.start_with?("c")
-}
-
-# Find a method that will not return creepy when creepy is after ferbie in the array
-
-p nineties_toys
+#4. remove until condition is false
+#array
+p shades_of_green
+shades_of_green.drop_while do |shade|
+ shade.length < 5
+end
+p shades_of_green
+#hash
+p class_examples
+class_examples.drop_while do |class, ex|
+  ex != true
+end
+p class_examples
