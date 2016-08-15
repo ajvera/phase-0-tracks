@@ -1,5 +1,5 @@
 #BUSINESS LOGIC
-#iterate through character arrays and advance each vowel
+#iterate through character arrays and advance each char to next vowel
 def next_vowel(char)
 	vowels = 'aeiou'.chars
 	vowel_index = 0
@@ -14,7 +14,7 @@ def next_vowel(char)
 	end
 	char
 end
-
+#iterate through character arrays and advance each char to next consonant
 def next_consonant(char)
 	consonants = 'bcdfghjklmnpqrstvwxyz'.chars
 	con_index = 0
@@ -31,6 +31,7 @@ def next_consonant(char)
 end
 
 #Split name into a two word array then into two nested character arrays
+#translate vowels and consonants to next respective character
 #Swap position of nested arrays and join them together again
 def name_trans(name)
 	name_array = name.downcase.split(' ').map! { |name| name.chars }
