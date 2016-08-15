@@ -32,7 +32,7 @@ end
 
 #Split name into a two word array then into two nested character arrays
 #Swap position of nested arrays and join them together again
-def nested_name(name)
+def name_trans(name)
 	name_array = name.downcase.split(' ').map! { |name| name.chars }
 	name_array.each do |sub_arrays|
 		sub_arrays.map! do |char|
@@ -47,3 +47,15 @@ def nested_name(name)
 end
 
 #USER INTERFACE
+$name_bank = {}
+p "Please enter the name you would like to turn into a secret agent name. Type 'quit' to quit."
+original_name = gets.chomp
+until original_name == 'quit'
+	new_name = name_trans(original_name)
+	$name_bank.store(original_name,new_name)
+	p "Enter another name. Type 'quit' to quit."
+	original_name = gets.chomp
+end
+$name_bank.each do |original, new|
+	p "#{original}'s secret name is #{new}"
+end
