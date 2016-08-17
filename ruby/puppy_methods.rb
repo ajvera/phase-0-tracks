@@ -46,7 +46,7 @@ class Turtle
 			else
 			end
 		end
-		new_phrase.join
+		puts new_phrase.join
 	end
 
 	def initialize()
@@ -57,12 +57,24 @@ end
 
 # DRIVER CODE
 
-zeus = Puppy.new
-p zeus.fetch("stick")
-p zeus.speak(5)
-p zeus.roll_over
-p zeus.dog_years(29)
-p zeus.mark_territory
+#zeus = Puppy.new
+#p zeus.fetch("stick")
+#p zeus.speak(5)
+#p zeus.roll_over
+#p zeus.dog_years(29)
+#p zeus.mark_territory
 
-gurt = Turtle.new
-p gurt.talk("Hello there")
+#gurt = Turtle.new
+#p gurt.talk("Hello there")
+
+turtle_births = 0
+turtle_array = []
+while turtle_births < 50
+	turtle_array << Turtle.new
+	turtle_births +=1
+end
+
+turtle_array.each do |turtle|
+	turtle.move
+	turtle.talk("Nice to meet you")
+end
