@@ -18,7 +18,12 @@ class Santa
 	
 end
 
-jeff = Santa.new
-p jeff.speak
-p jeff.eat_milk_and_cookies("peanut butter cookie")
-	
+santas = []
+genders = ["couch", "lemon", "beige", "nuanced"]
+ethnicity = ["mostly carbon","partially Bowie","hair-being (like cousin it)","oblong triangle"]
+
+genders.length.times do |i|
+	santas << Santa.new(genders[i],ethnicity[i])
+	puts "This Santa has a gender of #{genders[i]} and an ethnicity of #{ethnicity[i]}."
+	puts "There are currently #{santas.length} Santas in existence!"
+end
