@@ -1,5 +1,9 @@
 class Santa
 
+	#refacored getter/setter methods
+	attr_reader :age, :ethnicity, :reindeer_ranking
+	attr_accessor :gender
+
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
 		@gender = gender
@@ -16,23 +20,6 @@ class Santa
 		puts "That was a good #{cookie}!"
 	end
 
-	#getter methods
-	def age
-		@age
-	end
-	
-	def ethnicity
-		@ethnicity
-	end
-
-	def gender
-		@gender
-	end
-
-	def reindeer_ranking
-		@reindeer_ranking
-	end
-
 	#attribute changing methods
 	def celebrate_birthday
 		@age += 1
@@ -46,15 +33,10 @@ class Santa
 			end
 		end
 	end
-	
-	#setter method
-	def gender= (new_gender)
-		@gender = new_gender
-	end
 
 end
 
-#Driver code
+#Driver code - single instance creation
 santa = Santa.new("Male","Black")
 puts "This santa is #{santa.gender}, #{santa.ethnicity} and #{santa.age} years old"
 puts "Santa currently ranks reindeer as follows: #{santa.reindeer_ranking}"
@@ -65,7 +47,7 @@ puts "This santa is now #{santa.gender}, #{santa.ethnicity} and #{santa.age} yea
 puts "Santa now ranks reindeer as follows: #{santa.reindeer_ranking}"
 
 
-#Loop to create santas with pre-existing data structures
+#Driver code - loop driven instance creation (instance variables derived from arrays)
 
 santas = []
 genders = ["couch", "lemon", "beige", "nuanced"]
