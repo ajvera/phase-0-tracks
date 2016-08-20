@@ -1,8 +1,8 @@
 class Santa
 
 	#refacored getter/setter methods
-	attr_reader :age, :ethnicity, :reindeer_ranking
-	attr_accessor :gender
+	attr_reader :ethnicity
+	attr_accessor :gender, :age, :reindeer_ranking
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
@@ -36,7 +36,39 @@ class Santa
 
 end
 
-#Driver code - single instance creation
+# Santa-Con Simulator Santa Creator program
+
+#print a pretty array
+def print_array(array)
+	rank = 1
+	array.each do |item|
+		puts "#{rank}: #{item}"
+		rank += 1
+	end
+end
+
+genders = ["couch", "lemon", "beige", "nuanced", "leafy", "octogonal","fancy","devoid of meaning",
+	"FABULOUS","enchanted"]
+ethnicity = ["mostly carbon","partially Bowie","hair-being (like cousin it)","oblong triangle",
+	"opaque","melodious","robotic","furry"]
+ages = [*0..140]
+
+santa_count = 0
+until santa_count == 1000
+	santa = Santa.new(genders.sample, ethnicity.sample)
+	puts "This Santa has the gender identity #{santa.gender} and ethnicity of #{santa.ethnicity}."
+	santa.age = ages.sample
+	puts "This Santa is #{santa.age} years old."
+	santa.get_mad_at(santa.reindeer_ranking.sample)
+	puts "This Santa plays favories when it comes to reindeer. Current preference is -- "
+	print_array(santa.reindeer_ranking)
+	santa_count += 1
+end
+
+
+=begin
+
+#Driver code - single instance creation (commented out for release 4)
 santa = Santa.new("Male","Black")
 puts "This santa is #{santa.gender}, #{santa.ethnicity} and #{santa.age} years old"
 puts "Santa currently ranks reindeer as follows: #{santa.reindeer_ranking}"
@@ -47,7 +79,8 @@ puts "This santa is now #{santa.gender}, #{santa.ethnicity} and #{santa.age} yea
 puts "Santa now ranks reindeer as follows: #{santa.reindeer_ranking}"
 
 
-#Driver code - loop driven instance creation (instance variables derived from arrays)
+#Driver code - loop driven instance creation (instance variables derived from arrays) 
+#(commented out for release 4)
 
 santas = []
 genders = ["couch", "lemon", "beige", "nuanced"]
@@ -61,3 +94,5 @@ genders.length.times do |i|
 	santas[i].celebrate_birthday
 	puts "This santa just had a birthday and is now #{santas[i].age} years old"
 end
+
+=end
