@@ -29,20 +29,17 @@ class Alien
 	end
 
 	def diplomacy
+		puts "*The alien extends its' appendage in what seems to be a gesture of good will*"
 	end
 
 	def trade(resource)
+		if resource.length > 5
+			puts "The alien squeels with excitement and excretes several tonnes of gold"
+		else
+			blink
+		end
 	end
 
 end
 
-additudes = {
-	positive: ["great","new and wonderful sensations", "pretty chill", "enamored"],
-	neutral: ["ambivalent","meh..."],
-	negative: ["distain","envy","anger from not getting enough hugs that it projects onto"] }
-voices = ["8 tonnes of gravel falling into a vat of molasses","smooth jazz",
-	"the decline of modern civilization","mating turtles", "french poetry spoken by an eagle with mono"]
-vessels = ["Flying Tube Sock", "Classic UFO", "Interdimensional Platypus", "David Hasslehoff", "Space Dust"]
-eyes = [*32..796]
 
-alien_count = 0
