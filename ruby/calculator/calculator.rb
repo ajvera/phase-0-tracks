@@ -10,4 +10,8 @@ class Calculator
   def multiply(x,y)
     x * y
   end
+
+  def divide(x,y)
+  	x.to_f / y
+  end
 end
