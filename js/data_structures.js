@@ -33,3 +33,7 @@ myCar.summary();
 
 var dreamCar = new Car(2025,'tesla tank edition', 8000);
 dreamCar.summary();
+
+for (name in farm) {
+	console.log(name);
+}
