@@ -133,6 +133,7 @@ VirusPredictor.report(STATE_DATA)
 # What are some ways to iterate through a hash?
 # - hash.each do |key, value|, hash.length.times do |i|
 # When refactoring virus_effects, what stood out to you about the variables, if anything?
-# -This part confused me quite a bit. Not quite sure what is supposed to stand out here.
+# -no need to pass arguments to the methods within virus_effects
+# -instance variables are accessible to instance methods without passing them.
 # What concept did you most solidify in this challenge?
 # - Using class methods to execute a method on each instance of a given class.
