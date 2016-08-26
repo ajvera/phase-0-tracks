@@ -23,8 +23,8 @@ class VirusPredictor
   # Returns a call to predicted_deaths & speed of spread
   # each of these method calls is passed some instance variables
  def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
     output
   end
 
@@ -63,7 +63,7 @@ class VirusPredictor
   # popluation density and an arbitrary weight rounded down.
   # when refactoring we decided to remove print statements (separation of concerns)
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
   # predicted deaths is solely based on population density
 
   if @population_density >= 200
@@ -85,7 +85,7 @@ class VirusPredictor
   # prints second half of virus effects statement to screen
   # when refactoring we decided to remove print statements (separation of concerns)
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread#in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     @speed = 0.0
