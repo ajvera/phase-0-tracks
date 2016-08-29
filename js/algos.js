@@ -12,14 +12,11 @@ make the current string's length the new value of strLen and update longestStr t
 -Step 8: return longestStr*/
 
 function longestString(array) {
-	var strLen = 0;
-	var longestStr = null;
+	var longestStr = "";
 	for (i = 0; i < array.length; i++) {
-		if (array[i].length > strLen) {
-			strLen = array[i].length;
+		if (array[i].length > longestStr.length) {
 			longestStr = array[i];
-		} else if (array[i].length < strLen) {
-			strLen = strLen;
+		} else if (array[i].length <= longestStr.length) {
 			longestStr = longestStr;
 		} else {
 			break; 
