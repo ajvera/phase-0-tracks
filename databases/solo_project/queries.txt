@@ -1,0 +1,64 @@
+Release 2.1
+sqlite> select * from invoices;
+id          work_type   cost        hours_spent  location        lead_contractor_id
+----------  ----------  ----------  -----------  --------------  ------------------
+1           plumbing    300         5.2          Marriott Hotel  1
+2           carpentry   500         8.0          Wallace Home    2
+3           electric    45          0.5          Joans Basement  1
+4           foundaton   10000       40.0         State Building  3
+5           plumbing    500         6.4          McDonalds       1
+
+Release 2.2
+sqlite> update invoices set cost=350 where hours_spent=5.2;
+sqlite> select * from invoices;
+id          work_type   cost        hours_spent  location        lead_contractor_id
+----------  ----------  ----------  -----------  --------------  ------------------
+1           plumbing    350         5.2          Marriott Hotel  1
+2           carpentry   500         8.0          Wallace Home    2
+3           electric    45          0.5          Joans Basement  1
+4           foundaton   10000       40.0         State Building  3
+5           plumbing    500         6.4          McDonalds       1
+
+Release 2.3
+sqlite> select * from invoices, leads where invoices.lead_contractor_id = leads.lead_id;
+1|plumbing|350|5.2|Marriott Hotel|1|1|Muktabin Finstaristro
+2|carpentry|500|8.0|Wallace Home|2|2|Olgeird Brandt
+3|electric|45|0.5|Joans Basement|1|1|Muktabin Finstaristro
+4|foundaton|10000|40.0|State Building|3|3|Banst Erod
+5|plumbing|500|6.4|McDonalds|1|1|Muktabin Finstaristro
+
+Release 2.4
+sqlite> SELECT invoices.work_type, invoices.hours_spent, invoices.location, leads.name FROM invoices JOIN leads ON invoices.lead_contractor_id = leads.lead_id;
+work_type   hours_spent  location        name
+----------  -----------  --------------  ---------------------
+plumbing    5.2          Marriott Hotel  Muktabin Finstaristro
+carpentry   8.0          Wallace Home    Olgeird Brandt
+electric    0.5          Joans Basement  Muktabin Finstaristro
+foundaton   40.0         State Building  Banst Erod
+plumbing    6.4          McDonalds       Muktabin Finstaristro
+
+Release 2.5
+
+sqlite> DELETE FROM invoices WHERE location="McDonalds";
+sqlite> select * from invoices;
+id          work_type   cost        hours_spent  location        lead_contractor_id
+----------  ----------  ----------  -----------  --------------  ------------------
+1           plumbing    350         5.2          Marriott Hotel  1
+2           carpentry   500         8.0          Wallace Home    2
+3           electric    45          0.5          Joans Basement  1
+4           foundaton   10000       40.0         State Building  3
+
+Release 3.2
+---INNER JOIN---
+sqlite> SELECT invoices.work_type, invoices.hours_spent, leads.name FROM invoices INNER JOIN leads ON invoices.lead_contractor_id=leads.lead_id;
+plumbing|5.2|Muktabin Finstaristro
+carpentry|8.0|Olgeird Brandt
+electric|0.5|Muktabin Finstaristro
+foundaton|40.0|Banst Erod
+
+---LEFT JOIN---
+sqlite> SELECT invoices.work_type, invoices.hours_spent, leads.name FROM invoices LEFT JOIN leads ON invoices.lead_contractor_id=leads.lead_id;
+plumbing|5.2|Muktabin Finstaristro
+carpentry|8.0|Olgeird Brandt
+electric|0.5|Muktabin Finstaristro
+foundaton|40.0|Banst Erod
