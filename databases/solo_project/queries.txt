@@ -47,3 +47,18 @@ id          work_type   cost        hours_spent  location        lead_contractor
 2           carpentry   500         8.0          Wallace Home    2
 3           electric    45          0.5          Joans Basement  1
 4           foundaton   10000       40.0         State Building  3
+
+Release 3.2
+---INNER JOIN---
+sqlite> SELECT invoices.work_type, invoices.hours_spent, leads.name FROM invoices INNER JOIN leads ON invoices.lead_contractor_id=leads.lead_id;
+plumbing|5.2|Muktabin Finstaristro
+carpentry|8.0|Olgeird Brandt
+electric|0.5|Muktabin Finstaristro
+foundaton|40.0|Banst Erod
+
+---LEFT JOIN---
+sqlite> SELECT invoices.work_type, invoices.hours_spent, leads.name FROM invoices LEFT JOIN leads ON invoices.lead_contractor_id=leads.lead_id;
+plumbing|5.2|Muktabin Finstaristro
+carpentry|8.0|Olgeird Brandt
+electric|0.5|Muktabin Finstaristro
+foundaton|40.0|Banst Erod
