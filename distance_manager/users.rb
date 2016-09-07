@@ -1,6 +1,5 @@
 require 'sqlite3'
 
-
 class Users
 
 	attr_accessor :name, :email, :partner_name, :partner_email, :u_id
@@ -32,6 +31,23 @@ class Users
 		SQL
 
 		DB[:conn].execute(sql, self.name, self.email, self.partner_name, self.partner_email)
+
+		@u_id = DB[:conn].execute("SELECT last_insert_rowid() FROM users")[0][0]
 	end
+
+	def self.create(name:, email:, partner_name:, partner_email:)
+		user = Users.new(name, email, partner_name, partner_email)
+		user.save
+		user
+	end
+
+	def self.user_validation(username)
+		if username == DB[:conn].execute("SELECT name FROM users WHERE name='?'",[username])
+			true
+		else
+			false
+		end
+	end
+
 
 end
