@@ -1,0 +1,14 @@
+body {
+	position: absolute;
+	display: block;
+}
+img {
+	display: block	
+	height: 80%;
+	width: 80%
+}
+
+cite {
+	display: block;
+	position: relative;
+}
