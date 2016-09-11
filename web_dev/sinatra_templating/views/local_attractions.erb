@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Local Attractions</title>
+</head>
+<body>
+	<h1>Local Attractions</h1>
+	<p>Here are some fun things you can do in your host DBC city! in case you forgot here are our campuses!</p>
+	<p><ul><% @campus.each do |campus| %>
+		<li><%= campus['campus'] %></li>
+		<%end%>
+		</ul>
+	</p>
+	<h2>FUN THINGS IN SOME CITIES</h2>
+	<ul>
+		<li>Chicago<ul>
+			<li>Eat awesome food!</li>
+		</ul></li>
+		<li>New York
+			<ul>
+				<li>Explore the city!</li>
+			</ul>
+		</li>
+		<li>San Francisco
+			<ul>
+				<li>Feel isolated in a city of millions!</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
