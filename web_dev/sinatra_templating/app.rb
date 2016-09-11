@@ -24,4 +24,11 @@ post '/students' do
   redirect '/'
 end
 
+#add http route for local_attractions template
+
+get '/local' do
+	@campus = db.execute("SELECT DISTINCT campus FROM students")
+	erb :local_attractions
+end
+
 # add static resources
